@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import <CoreImage/CoreImage.h>
 #import "UIImage+Extens.h"
+#import "CoreImageController.h"
+
+
+
 
 
 
@@ -17,14 +21,17 @@
 
 @interface ViewController ()
 
-@property(nonatomic, retain) UIImageView * codeImageView;
+@property (nonatomic, retain) UIImageView * codeImageView;
+
+@property (nonatomic, retain) UIButton * testButton;
+
 
 @end
 
 @implementation ViewController
 
 
-@synthesize codeImageView;
+@synthesize codeImageView , testButton;
 
 
 
@@ -34,7 +41,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    [self initUI];
+   // [self initUI];
+    
+    
+    [self initButton];
     
 }
 
@@ -105,6 +115,27 @@
 }
 
 
+- (void)initButton {
+    
+    if (!testButton) {
+        testButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 120, 120, 40)];
+        testButton.backgroundColor = [UIColor redColor];
+        [testButton addTarget:self action:@selector(testButtonAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:testButton];
+    }
+    
+    
+    
+}
+
+- (void)testButtonAction {
+    
+
+    CoreImageController * coreImageController = [[CoreImageController alloc]init];
+    
+    [self presentViewController:coreImageController animated:NO completion:nil];
+    
+}
 
 
 @end

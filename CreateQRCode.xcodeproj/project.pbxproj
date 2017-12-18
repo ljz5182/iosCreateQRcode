@@ -16,6 +16,8 @@
 		E3DA10E21FE74D5B0071AD5B /* CreateQRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA10E11FE74D5B0071AD5B /* CreateQRCodeTests.m */; };
 		E3DA10ED1FE74D5B0071AD5B /* CreateQRCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA10EC1FE74D5B0071AD5B /* CreateQRCodeUITests.m */; };
 		E3DA10FD1FE753CD0071AD5B /* UIImage+Extens.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA10FC1FE753CD0071AD5B /* UIImage+Extens.m */; };
+		E3DA11001FE798DE0071AD5B /* CoreImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA10FF1FE798DE0071AD5B /* CoreImageController.m */; };
+		E3DA11071FE79FA40071AD5B /* CIFilterEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA11061FE79FA40071AD5B /* CIFilterEffect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,11 @@
 		E3DA10EE1FE74D5B0071AD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3DA10FB1FE753CD0071AD5B /* UIImage+Extens.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extens.h"; sourceTree = "<group>"; };
 		E3DA10FC1FE753CD0071AD5B /* UIImage+Extens.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extens.m"; sourceTree = "<group>"; };
+		E3DA10FE1FE798DE0071AD5B /* CoreImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreImageController.h; sourceTree = "<group>"; };
+		E3DA10FF1FE798DE0071AD5B /* CoreImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageController.m; sourceTree = "<group>"; };
+		E3DA11021FE79BB90071AD5B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		E3DA11051FE79FA40071AD5B /* CIFilterEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIFilterEffect.h; sourceTree = "<group>"; };
+		E3DA11061FE79FA40071AD5B /* CIFilterEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIFilterEffect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 				E3DA10E01FE74D5B0071AD5B /* CreateQRCodeTests */,
 				E3DA10EB1FE74D5B0071AD5B /* CreateQRCodeUITests */,
 				E3DA10C61FE74D5B0071AD5B /* Products */,
+				E3DA11011FE79BB90071AD5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,11 +112,14 @@
 		E3DA10C71FE74D5B0071AD5B /* CreateQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				E3DA11041FE79F8C0071AD5B /* Model */,
 				E3DA10FA1FE7536B0071AD5B /* Category */,
 				E3DA10C81FE74D5B0071AD5B /* AppDelegate.h */,
 				E3DA10C91FE74D5B0071AD5B /* AppDelegate.m */,
 				E3DA10CB1FE74D5B0071AD5B /* ViewController.h */,
 				E3DA10CC1FE74D5B0071AD5B /* ViewController.m */,
+				E3DA10FE1FE798DE0071AD5B /* CoreImageController.h */,
+				E3DA10FF1FE798DE0071AD5B /* CoreImageController.m */,
 				E3DA10CE1FE74D5B0071AD5B /* Main.storyboard */,
 				E3DA10D11FE74D5B0071AD5B /* Assets.xcassets */,
 				E3DA10D31FE74D5B0071AD5B /* LaunchScreen.storyboard */,
@@ -143,6 +154,23 @@
 				E3DA10FC1FE753CD0071AD5B /* UIImage+Extens.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E3DA11011FE79BB90071AD5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3DA11021FE79BB90071AD5B /* CoreImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3DA11041FE79F8C0071AD5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3DA11051FE79FA40071AD5B /* CIFilterEffect.h */,
+				E3DA11061FE79FA40071AD5B /* CIFilterEffect.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DA11071FE79FA40071AD5B /* CIFilterEffect.m in Sources */,
+				E3DA11001FE798DE0071AD5B /* CoreImageController.m in Sources */,
 				E3DA10CD1FE74D5B0071AD5B /* ViewController.m in Sources */,
 				E3DA10D81FE74D5B0071AD5B /* main.m in Sources */,
 				E3DA10FD1FE753CD0071AD5B /* UIImage+Extens.m in Sources */,
